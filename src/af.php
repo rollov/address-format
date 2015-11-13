@@ -7,20 +7,70 @@
  */
 namespace AddressFormat;
 
+/**
+ * Class AF
+ * @package AddressFormat
+ */
 class AF
 {
+    /**
+     * @var string
+     */
     public $locale = '';
+
+    /**
+     * @var string
+     */
     public $company = '';
+
+    /**
+     * @var string
+     */
     public $name = '';
+
+    /**
+     * @var string
+     */
     public $street_number = '';
+
+    /**
+     * @var string
+     */
     public $street = '';
+
+    /**
+     * @var string
+     */
     public $city = '';
+
+    /**
+     * @var string
+     */
     public $state_code = '';
+
+    /**
+     * @var string
+     */
     public $zip_code = '';
+
+    /**
+     * @var string
+     */
     public $country = '';
+
+    /**
+     * @var string
+     */
     public $delimiter = ' ';
+
+    /**
+     * @var string
+     */
     public $patterns = null;
 
+    /**
+     * @param $locale
+     */
     public function __construct($locale) {
 
         $this->locale = $locale;
@@ -29,6 +79,9 @@ class AF
 
     }
 
+    /**
+     * @return mixed
+     */
     public function  format() {
 
         $locale = $this->locale;
