@@ -1,0 +1,8 @@
+{
+    "patterns": {
+        "US": "%o%d%fl%d%n %s%d%l, %sc %z%d%c",
+        "DE": "%o%d%fl%d%s %n%d%z %l%d%c"
+
+    }
+
+}
