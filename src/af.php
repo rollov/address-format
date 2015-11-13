@@ -37,6 +37,12 @@ class AF
         if ($this->company == '')
             $pattern = preg_replace('/%o%d/', '', $pattern);
 
+        if ($this->name == '')
+            $pattern = preg_replace('/%fl%d/', '', $pattern);
+
+        if ($this->country == '')
+            $pattern = preg_replace('/%d%c/', '', $pattern);
+
         $find = array(
             '/%o/', '/%fl/', '/%n/', '/%s/', '/%l/', '/%sc/', '/%z/', '/%c/', '/%d/');
         $replace = array($this->company, $this->name, $this->street_number,
