@@ -97,7 +97,7 @@ class AF
             $pattern = preg_replace('/%d%c/', '', $pattern);
 
         $find = array(
-            '/%o/', '/%fl/', '/%n/', '/%s/', '/%l/', '/%sc/', '/%z/', '/%c/', '/%d/');
+            '/%o/', '/%fl/', '/%n/', '/%s/', '/%l/', '/%b/', '/%z/', '/%c/', '/%d/');
         $replace = array($this->company, $this->name, $this->street_number,
             $this->street, $this->city, $this->state_code, $this->zip_code,
             $this->country, $this->delimiter);
