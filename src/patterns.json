@@ -2,8 +2,7 @@
     "patterns": {
         "US": "%fl%d%o%d%n %s%d%a%d%l, %b %z%d%c",
         "DE": "%o%d%fl%d%s %n%d%a%d%z %l%d%c",
-        "GB": "%fl%d%o%d%n %s%d%a%d%l%d%z%d%c"
-
+        "GB": "%fl%d%o%d%n %s%d%a%d%l%d%z%d%c",
+        "CA": "%fl%d%o%d%n %s%d%a%d%l %b  %z%d%c"
     }
 }
-
