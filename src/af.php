@@ -38,6 +38,8 @@ class AF
      */
     public $street = '';
 
+    public $street_annex = '';
+
     /**
      * @var string
      */
@@ -96,11 +98,31 @@ class AF
         if ($this->country == '')
             $pattern = preg_replace('/%d%c/', '', $pattern);
 
+        if ($this->street_annex == '')
+            $pattern = preg_replace('/%a%d/', '', $pattern);
+
+        if ($this->locale == 'GB') {
+            $this->country = strtoupper($this->country);
+            $this->city = strtoupper($this->city);
+        }
+
+        /*
+         * o = organization/company
+         * fl = firstname lastname
+         * n = street number
+         * s = street
+         * a = street annex
+         * l = city
+         * b = US, CA state code
+         * z = zip code
+         * c = country
+         */
+
         $find = array(
-            '/%o/', '/%fl/', '/%n/', '/%s/', '/%l/', '/%b/', '/%z/', '/%c/', '/%d/');
+            '/%o/', '/%fl/', '/%n/', '/%s/', '/%a/', '/%l/', '/%b/', '/%z/', '/%c/', '/%d/');
         $replace = array($this->company, $this->name, $this->street_number,
-            $this->street, $this->city, $this->state_code, $this->zip_code,
-            $this->country, $this->delimiter);
+            $this->street, $this->street_annex, $this->city, $this->state_code,
+            $this->zip_code, $this->country, $this->delimiter);
 
         return preg_replace($find, $replace, $pattern);
     }
